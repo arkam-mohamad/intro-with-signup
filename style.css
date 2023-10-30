@@ -1,0 +1,122 @@
+*{
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main{
+  background-image: url('./images/bg-intro-desktop.png');
+  background-color: hsl(0, 100%, 74%) ;
+  margin: 100px auto;
+  display: grid;
+  padding: 40px;
+  grid-template-columns: 1fr 1fr;
+  max-width: 800px;
+}
+.content{
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+h1{
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+p{
+  font-size: 12px;
+  margin-top: 0;
+}
+h2{
+  background-color: hsl(248, 32%, 49%);
+  font-size: 12px;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+}
+h2 span{
+  font-weight: 600;
+}
+.form{
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 15px;
+  padding: 20px 40px;
+}
+.form div{
+  border: 1px solid hsl(246, 25%, 77%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  border-radius: 5px;
+  position: relative;
+}
+.form .hidden{
+  border: 1px solid hsl(0, 100%, 74%);
+}
+input{
+  border: none;
+  color: hsl(249, 10%, 26%);
+  font-weight: 600;
+}
+input::placeholder{
+  color: hsl(246, 25%, 77%);
+  font-weight: 500;
+}
+input:focus, input:active{
+  outline: none;
+}
+.form p.error{
+  position: absolute;
+  top: 35px;
+  right: 10px;
+  color: hsl(0, 100%, 74%);
+  font-weight: 600;
+}
+.error,.error-image{
+  visibility: hidden;
+}
+.hidden .error, .hidden .error-image{
+  visibility: visible;
+}
+button{
+  border: 0;
+  padding: 10px;
+  background-color: hsl(154, 59%, 51%);
+  color: white;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+button:hover{
+  opacity: 0.7;
+  cursor: pointer;
+}
+.form p{
+  font-size: 8px;
+  text-align: center;
+  align-self: center;
+  color: hsl(246, 25%, 77%);
+}
+p span{
+  color: hsl(0, 100%, 74%);
+  font-weight: 500;
+}
+
+
+@media screen and (max-width:450px) {
+  main{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+}
